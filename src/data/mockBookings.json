@@ -1,0 +1,26 @@
+[
+  {
+    "id": "b1",
+    "vehicleId": "v1",
+    "start": "2024-06-10T09:00:00.000Z",
+    "end": "2024-06-12T17:00:00.000Z",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "123-456-7890",
+    "pickup": "Airport",
+    "dropoff": "Downtown Hotel",
+    "status": "confirmed"
+  },
+  {
+    "id": "b2",
+    "vehicleId": "v2",
+    "start": "2024-06-15T10:00:00.000Z",
+    "end": "2024-06-15T18:00:00.000Z",
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "phone": "098-765-4321",
+    "pickup": "Cruise Terminal",
+    "dropoff": "Vineyard Tour",
+    "status": "confirmed"
+  }
+]

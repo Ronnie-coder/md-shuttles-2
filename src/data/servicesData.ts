@@ -1,3 +1,4 @@
+// src/data/servicesData.ts
 
 import { Car, Users, Plane, Map, Package, Building } from 'lucide-react';
 
@@ -80,5 +81,4 @@ export const servicesData = [
       "VIP Airport Services"
     ]
   }
-
-
+];

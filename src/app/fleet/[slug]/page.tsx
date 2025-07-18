@@ -7,10 +7,10 @@ import styles from './VehicleDetails.module.scss';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-// Define the Props type to satisfy the Promise expectation
+// Define the Props type to satisfy the Promise expectation for both params and searchParams
 type Props = {
-  params: Promise<{ slug: string }>; // Changed to Promise to match expected type
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ slug: string }>; // Already set to Promise from previous fix
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>; // Updated to Promise to match expected type
 };
 
 // Generate metadata for the page (SEO purposes)

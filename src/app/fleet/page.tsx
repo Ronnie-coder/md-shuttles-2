@@ -1,4 +1,4 @@
-
+// src/app/fleet/page.tsx
 import { vehicleRepository } from '@/lib/repository';
 import CarCard from '@/components/fleet/CarCard';
 import styles from './Fleet.module.scss';
@@ -15,7 +15,7 @@ export default async function FleetPage() {
   return (
     <div className="page-container">
       <div className={styles.header}>
-        <h1>Our Premium Fleet</h1>
+        <h1 className={styles.mainHeading}>Our Premium Fleet</h1>
         <p>
           Each vehicle in our fleet is fully licensed, regularly maintained, and equipped for your safety and comfort. Choose the perfect ride for your journey.
         </p>

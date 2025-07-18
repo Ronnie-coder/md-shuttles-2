@@ -1,5 +1,3 @@
-// src/app/contact/page.tsx
-
 import ContactForm from '@/components/contact/ContactForm';
 import { Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
 import styles from './Contact.module.scss';
@@ -62,4 +60,4 @@ export default function ContactPage() {
       </div>
     </div>
   );
-
+}

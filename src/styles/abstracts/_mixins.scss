@@ -1,0 +1,17 @@
+@import 'variables';
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == medium {
+    @media (max-width: $bp-medium) { @content; }
+  }
+  @if $breakpoint == large {
+    @media (max-width: $bp-large) { @content; }
+  }
+}
+
+@mixin flex-center($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}

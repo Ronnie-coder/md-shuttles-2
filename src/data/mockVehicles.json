@@ -1,38 +1,4 @@
-[
-  {
-    "id": "v1",
-    "slug": "mercedes-benz-sprinter",
-    "name": "Mercedes-Benz Sprinter",
-    "seats": 14,
-    "luggage": 10,
-    "image": "/images/vehicles/mercedes-sprinter.jpg",
-    "dayRate": 4500,
-    "description": "Ideal for larger groups, corporate events, or airport transfers. The Mercedes-Benz Sprinter offers unparalleled comfort and space, ensuring a smooth and relaxing journey for every passenger.",
-    "features": ["Leather Seats", "Air Conditioning", "Wi-Fi Onboard", "Privacy Glass"]
-  },
-  {
-    "id": "v2",
-    "slug": "vw-transporter",
-    "name": "VW Transporter",
-    "seats": 8,
-    "luggage": 8,
-    "image": "/images/vehicles/vw-transporter.jpg",
-    "dayRate": 3200,
-    "description": "The perfect blend of style and practicality. Our VW Transporter is a versatile choice for family tours, small group outings, or efficient shuttle services. Ample luggage space and a premium interior.",
-    "features": ["Climate Control", "USB Charging Ports", "Spacious Interior"]
-  },
-  {
-    "id": "v3",
-    "slug": "luxury-sedan",
-    "name": "Luxury Sedan",
-    "seats": 4,
-    "luggage": 3,
-    "image": "/images/vehicles/luxury-sedan.jpg",
-    "dayRate": 2500,
-    "description": "For executive travel or special occasions, our luxury sedan provides a premium, private experience. Travel in sophistication and comfort with a dedicated chauffeur.",
-    "features": ["Heated Leather Seats", "Premium Sound System", "Bottled Water"]
-  }
-=======
+// src/data/mockVehicles.json
 [
   {
     "id": "v1",

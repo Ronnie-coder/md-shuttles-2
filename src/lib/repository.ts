@@ -1,7 +1,7 @@
 import { Vehicle } from "@/types";
 import mockVehicles from '@/data/mockVehicles.json';
 
-// --- Vehicle Repository ---
+
 export const vehicleRepository = {
   findAll: async (): Promise<Vehicle[]> => {
     return Promise.resolve(mockVehicles);

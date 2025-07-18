@@ -7,15 +7,16 @@ import styles from './VehicleDetails.module.scss';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-// Define the Props type for the dynamic route page
+// Define the Props type to satisfy the Promise expectation
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>; // Changed to Promise to match expected type
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
 // Generate metadata for the page (SEO purposes)
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const vehicle = await vehicleRepository.findBySlug(params.slug);
+  const resolvedParams = await params; // Resolve the Promise to access slug
+  const vehicle = await vehicleRepository.findBySlug(resolvedParams.slug);
   if (!vehicle) {
     return { title: 'Vehicle Not Found' };
   }
@@ -27,7 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // Main page component for vehicle details
 export default async function VehicleDetailsPage({ params }: Props) {
-  const vehicle = await vehicleRepository.findBySlug(params.slug);
+  const resolvedParams = await params; // Resolve the Promise to access slug
+  const vehicle = await vehicleRepository.findBySlug(resolvedParams.slug);
 
   // If vehicle is not found, trigger Next.js 404 page
   if (!vehicle) {

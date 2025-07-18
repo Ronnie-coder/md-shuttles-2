@@ -1,3 +1,5 @@
+// src/types/index.ts
+
 export type Vehicle = {
   id: string;
   slug: string;
@@ -11,7 +13,7 @@ export type Vehicle = {
 };
 
 export type Booking = {
-  id:string;
+  id: string;
   vehicleId: string;
   start: string; // ISO
   end: string;   // ISO
@@ -21,3 +23,5 @@ export type Booking = {
   pickup: string;
   dropoff: string;
   status: "pending" | "confirmed" | "cancelled";
+  createdAt: Date; // <<< THIS IS THE FIX: Add the missing property
+};

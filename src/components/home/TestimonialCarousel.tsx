@@ -1,4 +1,5 @@
-// src/components/testimonials/TestimonialCarousel.tsx
+// src/components/home/TestimonialCarousel.tsx
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -49,8 +50,8 @@ export default function TestimonialCarousel() {
 
   return (
     <div className={styles.carouselContainer}>
-      <button 
-        className={`${styles.navButton} ${styles.prev}`} 
+      <button
+        className={`${styles.navButton} ${styles.prev}`}
         onClick={() => paginate(-1)}
         aria-label="Previous testimonial"
       >
@@ -78,8 +79,8 @@ export default function TestimonialCarousel() {
         </AnimatePresence>
       </div>
 
-      <button 
-        className={`${styles.navButton} ${styles.next}`} 
+      <button
+        className={`${styles.navButton} ${styles.next}`}
         onClick={() => paginate(1)}
         aria-label="Next testimonial"
       >
@@ -102,3 +103,4 @@ export default function TestimonialCarousel() {
       </div>
     </div>
   );
+}

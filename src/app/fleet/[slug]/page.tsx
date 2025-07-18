@@ -8,8 +8,10 @@ import styles from './VehicleDetails.module.scss';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+// THIS IS THE CORRECTED TYPE DEFINITION
 type Props = {
   params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -45,7 +47,7 @@ export default async function VehicleDetailsPage({ params }: Props) {
         </div>
 
         <div className={styles.infoPanel}>
-          <h1>{vehicle.name}</h1>
+          <h1 className={styles.mainHeading}>{vehicle.name}</h1>
           <div className={styles.specs}>
             <span><Armchair size={20} /> {vehicle.seats} Seats</span>
             <span><Briefcase size={20} /> {vehicle.luggage} Large Bags</span>

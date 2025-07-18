@@ -1,3 +1,5 @@
+// src/components/fleet/CarCard.tsx
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Armchair, Briefcase, ArrowRight } from 'lucide-react';
@@ -13,9 +15,9 @@ export default function CarCard({ vehicle }: CarCardProps) {
     <Link href={`/fleet/${vehicle.slug}`} className={styles.cardLink}>
       <div className={styles.card}>
         <div className={styles.imageContainer}>
-          <Image 
-            src={vehicle.image} 
-            alt={vehicle.name} 
+          <Image
+            src={vehicle.image}
+            alt={vehicle.name}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             style={{ objectFit: 'cover' }}
@@ -37,6 +39,4 @@ export default function CarCard({ vehicle }: CarCardProps) {
       </div>
     </Link>
   );
-
-
-
+}

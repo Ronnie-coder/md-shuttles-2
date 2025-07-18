@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // src/app/api/bookings/route.ts
 
 import { NextResponse } from 'next/server';
@@ -100,5 +99,4 @@ export async function POST(request: Request) {
       { status: 500 }
     );
   }
->>>>>>> d838527dfb3712e23902bb78922705722be566fb
 }

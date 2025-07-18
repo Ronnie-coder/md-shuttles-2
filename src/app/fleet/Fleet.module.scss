@@ -4,13 +4,6 @@
   text-align: center;
   margin-bottom: 3rem;
 
-  .mainHeading {
-    color: $color-light;
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-  }
-
   p {
     font-size: 1.8rem;
     color: rgba($color-light, 0.8);
@@ -23,24 +16,5 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 2.5rem;
-=======
-@import '../../styles/abstracts/variables';
 
-.header {
-  text-align: center;
-  margin-bottom: 3rem;
-
-  p {
-    font-size: 1.8rem;
-    color: rgba($color-light, 0.8);
-    max-width: 700px;
-    margin: 1rem auto 0 auto;
-  }
-}
-
-.fleetGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 2.5rem;
->>>>>>> d838527dfb3712e23902bb78922705722be566fb
 }

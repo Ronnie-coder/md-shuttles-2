@@ -1,4 +1,5 @@
 // src/components/ui/GlobalBackground.tsx
+
 "use client";
 
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
@@ -15,3 +16,4 @@ export default function GlobalBackground() {
       <div className={styles.overlay}></div>
     </div>
   );
+}

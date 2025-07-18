@@ -1,15 +1,14 @@
-// src/app/HomePageSections.module.scss
 @import '../styles/abstracts/variables';
 
-// Add padding-top to account for fixed header
+
 .section, .sectionLight {
-  padding: 8rem 0 5rem 0; // Increased top padding to account for fixed header
+  padding: 8rem 0 5rem 0;
   position: relative;
 }
 
 .sectionLight {
   background-color: rgba($color-light, 0.05);
-  -webkit-backdrop-filter: blur(10px); // Fixed order
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba($color-light, 0.1);
   border-bottom: 1px solid rgba($color-light, 0.1);
@@ -17,7 +16,7 @@
 
 .section {
   background-color: rgba($color-primary, 0.2);
-  -webkit-backdrop-filter: blur(10px); // Fixed order
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba($color-light, 0.1);
   border-bottom: 1px solid rgba($color-light, 0.1);
@@ -137,7 +136,7 @@
 .ctaSection {
   padding: 5rem 0;
   background-color: rgba($color-primary, 0.6);
-  -webkit-backdrop-filter: blur(10px); // Fixed order
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   color: $color-light;
   text-align: center;
@@ -169,3 +168,4 @@
   &:hover { 
     transform: translateY(-3px) scale(1.05); 
   }
+}

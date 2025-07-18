@@ -1,3 +1,5 @@
+// src/components/layout/Footer.tsx
+
 import Link from 'next/link';
 import styles from './Footer.module.scss';
 import { MapPin, Phone, Mail } from 'lucide-react';
@@ -25,11 +27,11 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.copyright}>
-        &copy; {new Date().getFullYear()} MD Shuttles. All Rights Reserved. | 
-        <a href="https://www.coderon.co.za" target="_blank" rel="noopener noreferrer" className={styles.coderonLink}> 
+        &copy; {new Date().getFullYear()} MD Shuttles. All Rights Reserved. |
+        <a href="https://www.coderon.co.za" target="_blank" rel="noopener noreferrer" className={styles.coderonLink}>
           Developed by Coderon
         </a>
       </div>
     </footer>
   );
-
+}

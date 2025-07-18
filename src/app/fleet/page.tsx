@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // src/app/fleet/page.tsx
 import { vehicleRepository } from '@/lib/repository';
 import CarCard from '@/components/fleet/CarCard';
@@ -61,5 +60,4 @@ export default async function FleetPage() {
       </div>
     </div>
   );
->>>>>>> d838527dfb3712e23902bb78922705722be566fb
 }

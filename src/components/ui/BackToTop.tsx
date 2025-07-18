@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -78,5 +77,4 @@ export default function BackToTop() {
       )}
     </AnimatePresence>
   );
->>>>>>> d838527dfb3712e23902bb78922705722be566fb
 }

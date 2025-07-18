@@ -9,7 +9,7 @@ import sectionsStyles from './HomePageSections.module.scss';
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as any } },
 };
 
 export default function HomePage() {
@@ -116,6 +116,6 @@ const ServiceCard = ({ icon: Icon, title, description, href }: any) => (
 const FeatureCard = ({ icon: Icon, title }: any) => (
   <motion.div className={sectionsStyles.featureCard} variants={sectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
     <Icon size={32} />
-    <h4>{title}</h4>a
+    <h4>{title}</h4>
   </motion.div>
 );

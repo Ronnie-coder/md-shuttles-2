@@ -1,5 +1,4 @@
 // src/app/fleet/[slug]/page.tsx
-
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { vehicleRepository } from '@/lib/repository';
@@ -8,12 +7,13 @@ import styles from './VehicleDetails.module.scss';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-// THIS IS THE CORRECTED TYPE DEFINITION
+// Define the Props type for the dynamic route page
 type Props = {
   params: { slug: string };
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
+// Generate metadata for the page (SEO purposes)
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const vehicle = await vehicleRepository.findBySlug(params.slug);
   if (!vehicle) {
@@ -25,9 +25,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// Main page component for vehicle details
 export default async function VehicleDetailsPage({ params }: Props) {
   const vehicle = await vehicleRepository.findBySlug(params.slug);
 
+  // If vehicle is not found, trigger Next.js 404 page
   if (!vehicle) {
     notFound();
   }
@@ -49,21 +51,25 @@ export default async function VehicleDetailsPage({ params }: Props) {
         <div className={styles.infoPanel}>
           <h1 className={styles.mainHeading}>{vehicle.name}</h1>
           <div className={styles.specs}>
-            <span><Armchair size={20} /> {vehicle.seats} Seats</span>
-            <span><Briefcase size={20} /> {vehicle.luggage} Large Bags</span>
+            <span>
+              <Armchair size={20} /> {vehicle.seats} Seats
+            </span>
+            <span>
+              <Briefcase size={20} /> {vehicle.luggage} Large Bags
+            </span>
           </div>
 
           <p className={styles.description}>{vehicle.description}</p>
-          
+
           <h3>Key Features</h3>
           <ul className={styles.featuresList}>
-            {vehicle.features.map(feature => (
+            {vehicle.features.map((feature) => (
               <li key={feature}>
                 <CheckCircle size={18} /> {feature}
               </li>
             ))}
           </ul>
-          
+
           <div className={styles.bookingSection}>
             <div className={styles.price}>
               <span>From</span>
@@ -80,9 +86,10 @@ export default async function VehicleDetailsPage({ params }: Props) {
   );
 }
 
+// Generate static paths for all vehicles at build time
 export async function generateStaticParams() {
   const vehicles = await vehicleRepository.findAll();
-  return vehicles.map(vehicle => ({
+  return vehicles.map((vehicle) => ({
     slug: vehicle.slug,
   }));
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import '../../styles/abstracts/variables';
 
 .form {
@@ -92,4 +93,100 @@
   p {
     color: rgba($color-light, 0.9);
   }
+=======
+@import '../../styles/abstracts/variables';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  label {
+    color: rgba($color-light, 0.9);
+    margin-bottom: 0.25rem;
+  }
+
+  // ✅ ERROR FIX: Global selectors are now nested within the local .inputGroup class.
+  input, textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: $color-light;
+    background-color: rgba($color-light, 0.05);
+    border: 1px solid rgba($color-light, 0.2);
+    border-radius: 5px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &::placeholder {
+      color: rgba($color-light, 0.5);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-secondary;
+      box-shadow: 0 0 0 3px rgba($color-secondary, 0.3);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+.error {
+  color: #ff8a80;
+  font-size: 1.4rem;
+  margin-top: 0.2rem;
+}
+
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background-color: $color-secondary;
+  color: $color-light;
+  padding: 1.2rem 2.4rem;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover:not(:disabled) {
+    background-color: darken($color-secondary, 10%);
+    transform: translateY(-2px);
+  }
+  
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+.successMessage {
+  text-align: center;
+  padding: 3rem;
+  background-color: rgba($color-secondary, 0.1);
+  border: 1px solid $color-secondary;
+  border-radius: 8px;
+
+  h3 {
+    color: $color-light;
+    margin-bottom: 1rem;
+  }
+  p {
+    color: rgba($color-light, 0.9);
+  }
+>>>>>>> d838527dfb3712e23902bb78922705722be566fb
 }
